@@ -1,3 +1,10 @@
+# Brian Leschke
+# April 28, 2016
+# Version 2.0
+# Python Evening Weather Alert
+# Some code may have been taken from
+# other sources such as Weather Underground.
+
 from urllib2 import urlopen
 import json
 import time
