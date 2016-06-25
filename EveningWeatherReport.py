@@ -44,14 +44,3 @@ for line in urllib2.urlopen("http://isc.sans.edu/infocon.txt"):
 		v.speak('Red. Serious Threats and Loss of connection across internet.')
   	else:
 		v.speak('Error: unable to find threat level.')
-
-# Get Current Bitcoin Value from Coinbase API.
-
-coinbase_api = urllib2.urlopen('https://coinbase.com/api/v1/prices/buy')
-response = coinbase_api.read()
-response_dictionary = json.loads(response)
-print response_dictionary['amount']
-#print response_dictionary['subtotal']['amount']
-v.speak('Current Value:')
-v.speak(response_dictionary['amount'])
-
