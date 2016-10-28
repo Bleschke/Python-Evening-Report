@@ -5,6 +5,11 @@
 # Some code may have been taken from
 # other sources such as Weather Underground.
 
+
+# *** Update History ***
+# 10/27/2016 - Added Code blue to internet threat level (used for testing). 
+
+
 from urllib2 import urlopen
 import json
 import time
@@ -42,5 +47,7 @@ for line in urllib2.urlopen("http://isc.sans.edu/infocon.txt"):
 		v.speak('Orange. Major threats and disruption in connectivity.')
    	elif line == 'red':
 		v.speak('Red. Serious Threats and Loss of connection across internet.')
+	elif line == 'blue':
+		v.speak('Blue. System Testing.')
   	else:
 		v.speak('Error: unable to find threat level.')
